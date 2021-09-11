@@ -1,0 +1,18 @@
+# PHP
+vendor/
+
+# Build
+/build/
+/src/Utils/mime-types.bin
+
+# Unit tests
+.phpunit.cache
+
+# Documentation
+.phpdoc/
+
+# Local
+local
+*.local
+*.local.*
+!/resources/**

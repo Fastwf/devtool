@@ -1,0 +1,35 @@
+{
+    "name": "fastwf/devtool",
+    "description": "Package containing development tools for Fast Web Framework applications.",
+    "type": "library",
+
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    },
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Fastwf/core"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Fastwf/asset"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Fastwf\\Devtool\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "David BELBEZE",
+            "email": "david.belbeze@gmail.com"
+        }
+    ],
+    "require": {
+        "fastwf/core": "dev-main",
+        "fastwf/asset": "dev-main"
+    }
+}
