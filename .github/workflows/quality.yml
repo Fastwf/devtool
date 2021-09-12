@@ -16,6 +16,7 @@ jobs:
         php-version: '7.4'
         coverage: xdebug2
         tools: composer:v2
+        ini-values: zend.exception_ignore_args=1
     - name: Install dependencies
       run: |
         composer install
