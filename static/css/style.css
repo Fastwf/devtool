@@ -1,0 +1,120 @@
+/* ---- Main layout styles ---- */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: monospace, sans-serif, serif;
+
+    color: #24292e;
+}
+
+.main-header {
+    padding: 16px 0;
+
+    background-color: #B00020;
+}
+.main-header h1 {
+    padding: 0 16px;
+    margin: 0 auto;
+
+    max-width: 1024px;
+
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container {
+    margin: auto;
+    padding: 16px;
+    max-width: 1024px;
+}
+
+
+/* ---- Main exception block */
+
+.exception-block {
+    margin-top: 16px;
+    padding: 16px;
+
+    background-color: rgba(0, 0, 0, 0.075);
+
+    border-radius: 8px;
+}
+
+.exception-block .namespace {
+    color: #B00020;
+    font-size: 14px;
+}
+.exception-block .exception {
+    color: #B00020;
+    font-size: 20px;
+    font-weight: bold;
+}
+.exception-block .message {
+    margin-top: 16px;
+
+    font-size: 16px;
+}
+.exception-block .location {
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    color: #6a737d;
+}
+
+
+/* ---- Trace block styles ---- */
+
+.exception-block + .trace {
+    margin-top: 16px;
+}
+.trace {
+    padding: 16px 8px;
+}
+.trace .call {
+    font-size: 14px;
+}
+.trace .call .class,
+.trace .call .function {
+    color: #6f42c1;
+}
+.trace .call .method {
+    color: #005cc5;
+}
+.trace .location {
+    margin-top: 8px;
+
+    color: #6a737d;
+    font-size: 12px;
+}
+
+/* ---- argument types ---- */
+
+.trace .string {
+    color: #032f62;
+}
+.trace .NULL,
+.trace .integer,
+.trace .double,
+.trace .boolean
+{
+    color: #005cc5;
+    color: #032f62;
+}
+.trace .array,
+.trace .object
+{
+    color: #d73a49;
+    color: #032f62;
+}
+
+
+/* ---- Common for .location class ---- */
+.location .file-path,
+.location .line {
+    font-weight: bold;
+}

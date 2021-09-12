@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fastwf/asset.git",
-                "reference": "377c6e6bd2e282fafcc59e90248f1ab3383af877"
+                "reference": "a76faa94e55a707d06be1910209315c91295e71f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fastwf/asset/zipball/377c6e6bd2e282fafcc59e90248f1ab3383af877",
-                "reference": "377c6e6bd2e282fafcc59e90248f1ab3383af877",
+                "url": "https://api.github.com/repos/Fastwf/asset/zipball/a76faa94e55a707d06be1910209315c91295e71f",
+                "reference": "a76faa94e55a707d06be1910209315c91295e71f",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +52,7 @@
                 "source": "https://github.com/Fastwf/asset/tree/main",
                 "issues": "https://github.com/Fastwf/asset/issues"
             },
-            "time": "2021-09-04T18:47:43+00:00"
+            "time": "2021-09-11T18:48:19+00:00"
         },
         {
             "name": "fastwf/core",
@@ -60,12 +60,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fastwf/core.git",
-                "reference": "31b77e61da66b94307e914a4e367c0e75fbd50ef"
+                "reference": "ec6a7b33dce6d40744ff5bcfc257a62e864b90b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fastwf/core/zipball/31b77e61da66b94307e914a4e367c0e75fbd50ef",
-                "reference": "31b77e61da66b94307e914a4e367c0e75fbd50ef",
+                "url": "https://api.github.com/repos/Fastwf/core/zipball/ec6a7b33dce6d40744ff5bcfc257a62e864b90b2",
+                "reference": "ec6a7b33dce6d40744ff5bcfc257a62e864b90b2",
                 "shasum": ""
             },
             "require-dev": {
@@ -97,7 +97,7 @@
                 "source": "https://github.com/Fastwf/core/tree/main",
                 "issues": "https://github.com/Fastwf/core/issues"
             },
-            "time": "2021-09-05T18:10:08+00:00"
+            "time": "2021-09-11T21:38:09+00:00"
         }
     ],
     "packages-dev": [
