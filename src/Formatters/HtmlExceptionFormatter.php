@@ -9,6 +9,9 @@ namespace Fastwf\Devtool\Formatters;
 class HtmlExceptionFormatter
 {
 
+    private const END_DIV = '</div>';
+    private const END_SPAN = '</span>';
+
     private $exception;
 
     public function __construct($exception)
@@ -45,10 +48,10 @@ class HtmlExceptionFormatter
             . '</header>'
             . '<section class="container">'
             . '<header class="exception-block">'
-            . '<div class="namespace">' . $className["namespace"] . '</div>'
-            . '<div class="exception">' . $className["name"] . '</div>'
+            . '<div class="namespace">' . $className["namespace"] . self::END_DIV
+            . '<div class="exception">' . $className["name"] . self::END_DIV
             . self::getLocation($this->exception->getFile(), $this->exception->getLine())
-            . '<div class="message">' . $this->exception->getMessage() . '</div>'
+            . '<div class="message">' . $this->exception->getMessage() . self::END_DIV
             . '</header>'
             . '</span></div>'
             . $this->getStackTrace()
@@ -128,9 +131,9 @@ class HtmlExceptionFormatter
         return '<div class="trace">'
             . '<div class="call">'
             . self::getCall($trace)
-            . '</div>'
+            . self::END_DIV
             . self::getLocation($trace["file"], $trace["line"])
-            . '</div>';
+            . self::END_DIV;
     }
 
     /**
@@ -145,8 +148,8 @@ class HtmlExceptionFormatter
 
         if (\array_key_exists('class', $trace))
         {
-            $call = '<span class="class">' . $trace['class'] . '</span>'
-                . '<span class="type">' . $trace['type'] . '</span>';
+            $call = '<span class="class">' . $trace['class'] . self::END_SPAN
+                . '<span class="type">' . $trace['type'] . self::END_SPAN;
             $functionClass = "method";
         }
         else
@@ -155,7 +158,7 @@ class HtmlExceptionFormatter
         }
 
         return $call
-            . '<span class="' . $functionClass . '">' . $trace['function'] . '</span>'
+            . '<span class="' . $functionClass . '">' . $trace['function'] . self::END_SPAN
             . '<span class="parentheses">(</span>'
             . \join(", ", \array_map('self::formatArg', \array_key_exists('args', $trace) ? $trace['args'] : []))
             . '<span class="parentheses">)</span>';

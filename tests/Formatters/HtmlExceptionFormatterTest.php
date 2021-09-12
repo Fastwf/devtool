@@ -14,14 +14,14 @@ class HtmlExceptionFormatterTest extends TestCase
      */
     public function testToHtml()
     {
-        function willFail()
+        function willFail($argForCoverage)
         {
-            throw new \Exception("Function that always fail!");
+            throw new \Exception("Function that always fail ($argForCoverage)!");
         }
 
         try
         {
-            willFail();
+            willFail("test");
         }
         catch (\Exception $e)
         {
@@ -29,9 +29,9 @@ class HtmlExceptionFormatterTest extends TestCase
 
             $body = $formatter->toHtml();
 
-            $this->assertTrue(\strpos($body, "500 Internal Server Error") !== false);
-            $this->assertTrue(\strpos($body, '<span class="function">Fastwf\Tests\Formatters\willFail</span>') !== false);
-            $this->assertTrue(\strpos($body, 'line <span class="line">19</span>') !== false);
+            $this->assertNotSame(false, \strpos($body, "500 Internal Server Error"));
+            $this->assertNotSame(false, \strpos($body, '<span class="function">Fastwf\Tests\Formatters\willFail</span>'));
+            $this->assertNotSame(false, \strpos($body, 'line <span class="line">19</span>'));
         }
     }
 
