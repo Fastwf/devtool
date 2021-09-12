@@ -38,7 +38,7 @@ class DevelopmentModule implements ConfigurationSettings, RouteSettings, Excepti
     public function getExceptionHandlers($engine)
     {
         return [
-            new GlobalExceptionHandler($this->modeProduction),
+            new GlobalExceptionHandler($engine, $this->modeProduction),
         ];
     }
 

@@ -17,10 +17,13 @@ use Fastwf\Devtool\Formatters\HtmlExceptionFormatter;
 class GlobalExceptionHandler implements ExceptionHandler 
 {
 
-    private $production;
+    protected $engine;
+    protected $production;
 
-    public function __construct($modeProduction)
+    public function __construct($engine, $modeProduction)
     {
+        $this->engine = $engine;
+
         $this->production = $modeProduction;
     }
 
@@ -31,12 +34,10 @@ class GlobalExceptionHandler implements ExceptionHandler
     {
         if (!($exception instanceof HttpException)) {
             // In all case, debug the stack trace in root logger
-            //  TODO: change when logger is implemented in fastwf/core
-            $stderr = fopen('php://stderr', 'w');
-            \fwrite($stderr, $exception->getMessage() . PHP_EOL);
-            \fwrite($stderr, $exception->getTraceAsString() . PHP_EOL);
-            \fclose($stderr);
-    
+            $this->engine
+                ->getService('Logger')
+                ->critical($exception->getMessage(), ['exception' => $exception]);
+
             // Build the html response
             if ($this->production === true)
             {
