@@ -157,7 +157,7 @@ class HtmlExceptionFormatter
         return $call
             . '<span class="' . $functionClass . '">' . $trace['function'] . '</span>'
             . '<span class="parentheses">(</span>'
-            . \join(", ", \array_map('self::formatArg', $trace['args']))
+            . \join(", ", \array_map('self::formatArg', \array_key_exists('args', $trace) ? $trace['args'] : []))
             . '<span class="parentheses">)</span>';
     }
 
