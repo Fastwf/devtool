@@ -60,12 +60,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fastwf/asset.git",
-                "reference": "4f3e1ef9f351dabc27c6059d5823bd9afcedcb7f"
+                "reference": "ea8eb552a4b49944ec7ba449ffb3a18c3bb012aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fastwf/asset/zipball/4f3e1ef9f351dabc27c6059d5823bd9afcedcb7f",
-                "reference": "4f3e1ef9f351dabc27c6059d5823bd9afcedcb7f",
+                "url": "https://api.github.com/repos/Fastwf/asset/zipball/ea8eb552a4b49944ec7ba449ffb3a18c3bb012aa",
+                "reference": "ea8eb552a4b49944ec7ba449ffb3a18c3bb012aa",
                 "shasum": ""
             },
             "require": {
@@ -100,7 +100,7 @@
                 "source": "https://github.com/Fastwf/asset/tree/master",
                 "issues": "https://github.com/Fastwf/asset/issues"
             },
-            "time": "2022-03-20T11:41:53+00:00"
+            "time": "2022-03-20T20:58:07+00:00"
         },
         {
             "name": "fastwf/core",

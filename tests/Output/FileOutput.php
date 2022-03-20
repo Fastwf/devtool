@@ -2,12 +2,12 @@
 
 namespace Fastwf\Tests\Output;
 
-use \Fastwf\Core\Engine\Output\IHttpOutput;
+use Fastwf\Api\Engine\Output\HttpOutputInterface;
 
 /**
  * Output class helper to control the content of the response.
  */
-class FileOutput implements IHttpOutput
+class FileOutput implements HttpOutputInterface
 {
 
     public $filename;
