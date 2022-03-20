@@ -4,24 +4,72 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a30fc5c38740c7e070896dc100f53b2",
+    "content-hash": "e9621f80b970f7325377e526918d6258",
     "packages": [
         {
-            "name": "fastwf/asset",
-            "version": "dev-main",
+            "name": "fastwf/api",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Fastwf/asset.git",
-                "reference": "32b8186dadb7a43212f44339fdfa808218d045f2"
+                "url": "https://github.com/Fastwf/api.git",
+                "reference": "8d08c2a8a7479b923f65a05db6aa9d29b93e64b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fastwf/asset/zipball/32b8186dadb7a43212f44339fdfa808218d045f2",
-                "reference": "32b8186dadb7a43212f44339fdfa808218d045f2",
+                "url": "https://api.github.com/repos/Fastwf/api/zipball/8d08c2a8a7479b923f65a05db6aa9d29b93e64b4",
+                "reference": "8d08c2a8a7479b923f65a05db6aa9d29b93e64b4",
                 "shasum": ""
             },
             "require": {
-                "fastwf/core": "dev-main"
+                "psr/http-message": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fastwf\\Api\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Fastwf\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David BELBEZE",
+                    "email": "david.belbeze@gmail.com"
+                }
+            ],
+            "description": "API declaration and utility class used in Fast Web Framework context.",
+            "support": {
+                "source": "https://github.com/Fastwf/api/tree/master",
+                "issues": "https://github.com/Fastwf/api/issues"
+            },
+            "time": "2022-03-20T10:53:28+00:00"
+        },
+        {
+            "name": "fastwf/asset",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Fastwf/asset.git",
+                "reference": "4f3e1ef9f351dabc27c6059d5823bd9afcedcb7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Fastwf/asset/zipball/4f3e1ef9f351dabc27c6059d5823bd9afcedcb7f",
+                "reference": "4f3e1ef9f351dabc27c6059d5823bd9afcedcb7f",
+                "shasum": ""
+            },
+            "require": {
+                "fastwf/core": "dev-master"
             },
             "require-dev": {
                 "phpunit/phpunit": "^9"
@@ -49,26 +97,27 @@
             ],
             "description": "Fast web framework library to serve static files",
             "support": {
-                "source": "https://github.com/Fastwf/asset/tree/main",
+                "source": "https://github.com/Fastwf/asset/tree/master",
                 "issues": "https://github.com/Fastwf/asset/issues"
             },
-            "time": "2021-09-11T22:12:41+00:00"
+            "time": "2022-03-20T11:41:53+00:00"
         },
         {
             "name": "fastwf/core",
-            "version": "dev-main",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Fastwf/core.git",
-                "reference": "6214efa326ec3ffe7aae73555ba83da894e6baaf"
+                "reference": "b22489a06f9b10e0f959f5359a6ad707f44b0187"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Fastwf/core/zipball/6214efa326ec3ffe7aae73555ba83da894e6baaf",
-                "reference": "6214efa326ec3ffe7aae73555ba83da894e6baaf",
+                "url": "https://api.github.com/repos/Fastwf/core/zipball/b22489a06f9b10e0f959f5359a6ad707f44b0187",
+                "reference": "b22489a06f9b10e0f959f5359a6ad707f44b0187",
                 "shasum": ""
             },
             "require": {
+                "fastwf/api": "dev-master",
                 "psr/log": "^1.1"
             },
             "require-dev": {
@@ -97,10 +146,64 @@
             ],
             "description": "Core module of fast web framework",
             "support": {
-                "source": "https://github.com/Fastwf/core/tree/main",
+                "source": "https://github.com/Fastwf/core/tree/master",
                 "issues": "https://github.com/Fastwf/core/issues"
             },
-            "time": "2021-09-12T10:22:55+00:00"
+            "time": "2022-03-20T11:33:21+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "efd67d1dc14a7ef4fc4e518e7dee91c271d524e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/efd67d1dc14a7ef4fc4e518e7dee91c271d524e4",
+                "reference": "efd67d1dc14a7ef4fc4e518e7dee91c271d524e4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/master"
+            },
+            "time": "2019-08-29T13:16:46+00:00"
         },
         {
             "name": "psr/log",
@@ -2248,7 +2351,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "fastwf/core": 20,
         "fastwf/asset": 20
